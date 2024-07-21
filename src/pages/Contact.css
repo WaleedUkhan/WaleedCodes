@@ -1,0 +1,38 @@
+/* src/pages/Contact.css */
+.contact-section {
+    padding: 3rem 0;
+    background-color: #f9fafb;
+  }
+  
+  .contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contact-section .container h2 {
+    margin-bottom: 2rem;
+    color: #4f46e5; /* Tailwind Indigo 600 */
+  }
+  
+  .contact-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #ffffff; /* Tailwind White */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-card a {
+    color: #374151; /* Tailwind Gray 700 */
+    text-decoration: none;
+  }
+  
+  .contact-card a:hover {
+    color: #1d4ed8; /* Tailwind Indigo 700 */
+  }
+  
+  .contact-card p {
+    color: #374151; /* Tailwind Gray 700 */
+  }
+  

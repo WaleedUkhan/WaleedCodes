@@ -1,11 +1,12 @@
-// src/components/Navbar.jsx
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+
+//Navbar is a functional Componet
 const Navbar = () => {
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(location.pathname);
+  const [activeLink, setActiveLink] = useState(location.pathname);//gives current location i-e where the use is right now
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (path) => {
@@ -14,12 +15,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white p-4 flex justify-between items-center">
-      <div className="text-2xl font-bold">WaleedCodes</div>
-      <div className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+    <nav className="bg-gray-500 text-white p-4 flex justify-between items-center">
+      {/* Navbar Brand */}
+      <div className="text-2xl font-bold tracking-wide font-poppins">WaleedCodes</div>
+
+      {/* Mobile Menu Icon - Only show when menu is closed */}
+
+      <div className={`${menuOpen ? 'hidden' : 'block '} md:hidden`} onClick={() => setMenuOpen(!menuOpen)}>
         <svg
           className="w-6 h-6"
-          fill="none"
+          fill="red"
           stroke="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,16 +37,19 @@ const Navbar = () => {
           />
         </svg>
       </div>
+
+      {/* Navigation Links */}
+
       <ul
         className={`${
-          menuOpen ? 'block' : 'hidden'
-        } md:flex justify-center space-x-4 w-full`}
+          menuOpen ? 'block m-10' : 'hidden'
+        } md:flex md:items-center justify-center space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto text-lg md:text-xl font-poppins`}
       >
         <li className="text-lg md:text-xl">
           <Link
             to="/"
             className={`${
-              activeLink === '/' ? 'gray underline' : 'no-underline'
+              activeLink === '/' ? 'text-yellow-400 underline' : 'no-underline text-white'
             }`}
             onClick={() => handleLinkClick('/')}
           >
@@ -52,7 +60,7 @@ const Navbar = () => {
           <Link
             to="/about"
             className={`${
-              activeLink === '/about' ? 'gray underline' : 'no-underline'
+              activeLink === '/about' ? 'text-yellow-400 underline' : 'no-underline text-white'
             }`}
             onClick={() => handleLinkClick('/about')}
           >
@@ -63,7 +71,7 @@ const Navbar = () => {
           <Link
             to="/skills"
             className={`${
-              activeLink === '/skills' ? 'gray underline' : 'no-underline'
+              activeLink === '/skills' ? 'text-yellow-400 underline' : 'no-underline text-white'
             }`}
             onClick={() => handleLinkClick('/skills')}
           >
@@ -74,18 +82,18 @@ const Navbar = () => {
           <Link
             to="/projects"
             className={`${
-              activeLink === '/projects' ? 'underline' : 'no-underline'
+              activeLink === '/projects' ? 'text-yellow-400 underline' : 'no-underline text-white'
             }`}
             onClick={() => handleLinkClick('/projects')}
           >
-            {/* Projects */}
+            Projects
           </Link>
         </li>
         <li className="text-lg md:text-xl">
           <Link
             to="/contact"
             className={`${
-              activeLink === '/contact' ? 'gray underline' : 'no-underline'
+              activeLink === '/contact' ? 'text-yellow-400 underline' : 'no-underline text-white'
             }`}
             onClick={() => handleLinkClick('/contact')}
           >
@@ -93,14 +101,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div className="hidden md:flex space-x-2">
-        <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm">
-          Login
-        </button>
-        <button className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 text-sm">
-          Sign Up
-        </button>
-      </div>
     </nav>
   );
 };

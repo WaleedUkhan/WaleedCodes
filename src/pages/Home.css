@@ -1,15 +1,19 @@
-/* src/pages/Home.css */
 .home-container {
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* New fancy gradient color */
+  /* Replacing gradient background with a solid, aesthetic color */
+  background-color: #1f2937; /* Tailwind's Gray-800 */
 }
 
+.bg-custom-color {
+  background-color: #1f2937; /* Solid background color */
+}
 
 .home-container h1 span {
   color: #fefefe;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Optional button styling */
 button {
   transition: background-color 0.3s ease;
 }
+
+

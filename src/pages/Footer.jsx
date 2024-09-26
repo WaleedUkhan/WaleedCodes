@@ -5,11 +5,11 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Import icon
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white p-4">
+    <footer className="bg-gray-500 text-white ">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-center md:text-left mb-4 md:mb-0">
+        <div className="text-center md:text-left mb-4 md:mb-0 ">
           <p className="text-lg font-semibold">Connect with me:</p>
-          <div className="flex justify-center md:justify-start mt-2 space-x-4">
+          <div className="flex justify-center md:justify-start m-2  space-x-4 ">
             <a href="https://github.com/WaleedUkhan" target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-2xl hover:text-gray-400 transition-colors duration-300" />
             </a>

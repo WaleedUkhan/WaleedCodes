@@ -1,0 +1,6 @@
+LINK: This is a component from react-router-dom used to create links to other pages in your React app. It replaces traditional anchor (<a>) tags and allows navigation without reloading the page, keeping the single-page application (SPA) behavior.
+
+useLocation: A hook provided by react-router-dom that gives you access to the current location object, which contains the current URL's pathname, search, hash, etc. It is useful for tracking the current route.
+
+
+
